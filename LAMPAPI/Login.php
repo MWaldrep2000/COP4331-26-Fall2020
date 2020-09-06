@@ -5,20 +5,20 @@
 
 
 	$inData = getRequestInfo();
-	
+
 	// Creating variables for use later
 	$id = 0;
 	$firstName = "";
 	$lastName = "";
 
 	// Creates connection between php and database
-	$conn = new mysqli("localhost", "mwaldrep_mwaldrep", "Seagull123$", "mwaldrep_contactyContacts");
+	$conn = new mysqli("localhost:3306", "mwaldrep_spade", "Seagull123$", "mwaldrep_contactyContacts");
 
 	// Checking the connect_error variable in the $conn object
-	if ($conn->connect_error) 
+	if ($conn->connect_error)
 	{
 		returnWithError( $conn->connect_error );
-	} 
+	}
 
 	else
 	{
@@ -38,7 +38,7 @@
 			$firstName = $row["FirstName"];
 			$lastName = $row["LastName"];
 			$id = $row["ID"];
-			
+
 			// returns the following objects as a json file
 			returnWithInfo($firstName, $lastName, $id );
 		}
@@ -52,7 +52,7 @@
 		// Closes the connection to the database
 		$conn->close();
 	}
-	
+
 	// Takes in json object and outputs a php object
 	function getRequestInfo()
 	{
@@ -66,18 +66,18 @@
 		// Prints out the json object
 		echo $obj;
 	}
-	
+
 	// Creates and returns a json object with values that show an error
 	function returnWithError( $err )
 	{
 		$retValue = '{"id":0,"firstName":"","lastName":"","error":"' . $err . '"}';
 		sendResultInfoAsJson( $retValue );
 	}
-	
+
 	function returnWithInfo( $firstName, $lastName, $id )
 	{
 		$retValue = '{"id":' . $id . ',"firstName":"' . $firstName . '","lastName":"' . $lastName . '","error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
-	
+
 ?>

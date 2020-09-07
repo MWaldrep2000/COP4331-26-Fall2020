@@ -22,7 +22,7 @@ else
 {
   // dots below mean string concatenation, SELECT FROM are keywords in sql
   // This code is creating the query request to get data from the database
-  $sql = "SELECT ID FROM Users where Login='" . $inData["login"]"'";
+  $sql = "SELECT ID FROM Users where Login='" . $inData["login"] . "'";
 
   // Performs query on sql database, this uses the function query() from the $conn object
   $result = $conn->query($sql);

@@ -10,10 +10,12 @@
 	{
 		returnWithError( $conn->connect_error );
 	} 
+
 	else
 	{
 		$sql = "select Name from Colors where Name like '%" . $inData["search"] . "%' and UserID=" . $inData["userId"];
 		$result = $conn->query($sql);
+
 		if ($result->num_rows > 0)
 		{
 			while($row = $result->fetch_assoc())
@@ -26,6 +28,7 @@
 				$searchResults .= '"' . $row["Name"] . '"';
 			}
 		}
+		
 		else
 		{
 			returnWithError( "No Records Found" );

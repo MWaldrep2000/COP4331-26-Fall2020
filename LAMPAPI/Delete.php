@@ -1,21 +1,21 @@
 <?php
 	$inData = getRequestInfo();
-	
-	$color = $inData["color"];
-	$userId = $inData["userId"];
 
-	$conn = new mysqli("localhost", "ricklein_leinecker", "WeLoveCOP4331", "ricklein_COP4331");
+	$conn = new mysqli("localhost:3306", "mwaldrep_spade", "Seagull123$", "mwaldrep_contactyContacts");
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$sql = "insert into Colors (UserId,Name) VALUES (" . $userId . ",'" . $color . "')";
+        // No single quotes around userID because stored as int
+        $sql = "DELETE FROM Info WHERE ID=" . $inData["contactId"];
+
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );
-		}
+        }
+        
 		$conn->close();
 	}
 	

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+
+        <title>Welcome</title>
+        
+        <script type = "text/javascript" src = "js/md5.js"></script>
+        <script type = "text/javascript" src = "js/code.js"></script>
+        <style>
+            .column{
+                float: left;
+                padding: 5px;
+            }
+
+            .row{
+                display: flex;
+            }
+
+            .contacts-list{
+                background-color: rgb(255, 202, 6);
+                width: 43%;
+                height: 100px;
+            }
+
+            .contact-add{
+                float: right;
+                padding-right: 45px;
+            }
+        </style>
+    </head>
+    <body onload="FakeLogin();">
+        <div class = "header">
+            <h1>Welcome **Insert Username Here **</h1>
+        </div>
+        <div class="row">
+            <div class="column">
+                <a href="addContact.html"><img src="images/PlusSign.png" alt="Add Contact" width="20" height="20"></a>
+            </div>
+            <div class="column">
+                <input type="image" src="images/TrashCan.jpg" alt="Delete Selected Contact" width="20" height="20"
+                    onclick="DeleteContact();">
+            </div>
+        </div>
+        <form class = "contacts-list">
+            <label for="select">Here is your list of contacts:</label>
+            <select id="select" style="width: 100%;" size="10">
+
+            </select>
+
+            <p>This is a random string of words to fill the space for the list
+                that we have in the user page. What this space is supposed to 
+                do is be occupied with the contacts that the user has added.
+                Clicking the plus sign opens a set of text boxes to add a new
+                contact. clicking a contact in the list highlights that specific
+                contact and then clicking the trash can would delete the highlighted
+                contact. Thats how i would like to have it work but we will see.
+            </p>
+        </form>
+    </body>
+</html>
+<!--  style="display: none; -->

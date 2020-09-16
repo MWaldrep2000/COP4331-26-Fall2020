@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="gb18030">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Contact Manager</title>
+
+    <script type = "text/javascript" src = "../js/md5.js"></script>
+    <script type = "text/javascript" src = "../js/code.js"></script>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/floating-labels.css" rel="stylesheet">
+  </head>
+  <body>
+    <form class="form-signin">
+  <div class="text-center mb-4">
+    <img class="mb-4" src="../images/ucfPegasus.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Registration page</h1>
+  </div>
+
+  <div class="form-label-group">
+    <input id="firstName" class="form-control" placeholder="FirstName" required autofocus>
+    <label for="firstName">FirstName</label>
+  </div>
+  
+  <div class="form-label-group">
+    <input id="lastName" class="form-control" placeholder="LastName" required autofocus>
+    <label for="lastName">LastName</label>
+  </div>
+  
+  <div class="form-label-group">
+    <input id="username" class="form-control" placeholder="User Name" required autofocus>
+    <label for="username">User Name</label>
+  </div>
+
+
+  <div class="form-label-group">
+    <input type="password" id="password" class="form-control" placeholder="Password" required>
+    <label for="password">Password</label>
+  </div>
+  
+  <div class="form-label-group">
+    <input type="password" id="confirmpassword" class="form-control" placeholder="Confirm Password" required>
+    <label for="confirmpassword">Confirm Password</label>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" type="button" onclick="Signup();">Register</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
+  <span id="RegisterResult"></span>
+</form>
+</body>
+</html>

@@ -6,6 +6,7 @@
 	{
 		returnWithError( $conn->connect_error );
 	} 
+
 	else
 	{
         // No single quotes around userID because stored as int

@@ -89,18 +89,20 @@
 				}
 				
 			}
+
+			returnWithInfo( $searchResults );
 		}
 		
 		else
 		{
 			returnWithError( "No Records Found" );
 		}
-
+		
 		
 		$conn->close();
 	}
+	
 
-	returnWithInfo( $searchResults );
 
 	function getRequestInfo()
 	{

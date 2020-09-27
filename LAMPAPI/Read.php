@@ -17,7 +17,6 @@
 	{
 		returnWithError( $conn->connect_error );
     } 
-    
 
 	else
 	{
@@ -76,6 +75,8 @@
 				}
 				
 			}
+			
+			returnWithInfo( $readResults );
 		}
 		
 		else
@@ -87,7 +88,6 @@
 		$conn->close();
 	}
 
-	returnWithInfo( $readResults );
 
 	function getRequestInfo()
 	{
